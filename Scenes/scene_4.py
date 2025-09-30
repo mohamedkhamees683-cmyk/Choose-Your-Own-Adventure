@@ -1,40 +1,45 @@
-# scene_4.py
-
 def play_scene():
     """
-    Scene 4 Template (Often a 'final' or 'climax' scene):
-    - Section A (Choice 1)
-    - Section B (Choice 2)
-    - Returns "quit" if the story ends, or maybe loops back to an earlier scene.
+    Scene 1: Echoes of the Forgotten Station
+    - Section A: Explore or Exit
+    - Section B: Follow or Ignore
+    - Returns the name of the next scene or 'quit'
     """
 
-    print("\n=== SCENE 4 ===")
-    print("Section A: [Set the stage for a final confrontation or resolution]")
-    
-    choice_a = input("You can 'confront' the challenge or 'turn back': ").lower().strip()
+    print("\n=== SCENE 1: Echoes of the Forgotten Station ===")
+    print("You awaken to the sound of dripping water and the distant hum of electricity.")
+    print("As your eyes adjust, you realize you're standing in an abandoned train station.")
+    print("The walls are cracked, vines creep through shattered windows, and the air smells of rust and old memories.")
+    print("A flickering sign overhead reads: 'Welcome to Station 9'—though the rest of the letters have faded into oblivion.")
 
-    if choice_a == "confront":
-        print("You gather your courage and face the threat head-on...")
-        # Placeholder logic
-    elif choice_a == "turn back":
-        print("You hesitate and consider escaping before it's too late...")
-        # Placeholder logic
-    else:
-        print("You freeze in fear, but time forces you to confront anyway.")
+    # Section A: First Choice
+    while True:
+        choice_a = input("\nDo you want to 'explore' the station or 'exit' immediately? ").lower().strip()
+        if choice_a == "explore":
+            print("\nYou step cautiously over broken tiles, peering into dusty corners.")
+            print("A torn map flutters on the wall, and beneath it, a flashlight—still working. You pocket it, feeling slightly more prepared.")
+            break
+        elif choice_a == "exit":
+            print("\nYou step outside, but the door locks behind you. A chill runs down your spine.")
+            break
+        else:
+            print("Invalid choice. Please type 'explore' or 'exit'.")
 
-    print("\n--- Moving to Section B of Scene 4 ---")
-    print("Section B: [Provide the final decision or resolution]")
-    
-    choice_b = input("Do you 'fight' or 'negotiate'? ").lower().strip()
+    # Section B: Second Choice
+    print("\n--- A faint sound echoes from the far end of the platform ---")
+    print("It sounds like metal scraping against stone, followed by a low whisper.")
 
-    if choice_b == "fight":
-        print("You engage in a fierce battle. Eventually, you emerge victorious—or not...")
-        print("This might be the end of your journey!")
-        return "quit"
-    elif choice_b == "negotiate":
-        print("You attempt to reason, forging a new path. The outcome is uncertain, but the journey ends here.")
-        return "quit"
-    else:
-        print("No action taken. Fate decides for you. The adventure concludes.")
-        return "quit"
+    while True:
+        choice_b = input("Do you want to 'follow' the noise or 'ignore' it? ").lower().strip()
+        if choice_b == "follow":
+            print("\nGripping the flashlight tightly, you move toward the sound.")
+            print("The corridor narrows, the walls closing in. The whisper grows louder, almost forming words.")
+            print("You feel a chill run down your spine as you step into the darkness...")
+            return "scene_2"
+        elif choice_b == "ignore":
+            print("\nYou stay put, hoping the sound passes. But something else catches your eye—a glimmer beneath the bench.")
+            print("You reach for it, but the whisper returns, louder this time...")
+            return "scene_2"
+        else:
+            print("Invalid choice. Please type 'follow' or 'ignore'.")
 
