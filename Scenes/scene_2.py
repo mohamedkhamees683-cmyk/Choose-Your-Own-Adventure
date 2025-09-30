@@ -1,39 +1,35 @@
 # scene_2.py
 
-def play_scene():
+def scene_2():
     """
-    Scene 2 Template:
-    - Section A (Choice 1)
-    - Section B (Choice 2)
-    - Returns the name of the next scene (e.g., "scene_3") or "quit".
+    المشهد الثاني: عند النهر
+    - قرارات جديدة: الشرب، تتبع آثار الأقدام، أو تسلق صخرة
+    - يرجع اسم المشهد التالي
     """
 
-    print("\n=== SCENE 2 ===")
-    print("Section A: [Describe your new setting here]")
-    
-    choice_a = input("You can choose 'search' the area or 'move on': ").lower().strip()
+    print("\n=== المشهد 2: ضفة النهر ===")
+    print("بعد السير قليلاً، تصل إلى نهر صغير يلمع تحت أشعة الشمس.")
+    print("الماء يبدو عذبًا وباردًا، وأسماك صغيرة تتحرك بسرعة تحته...")
+    print("لكن على الضفة ترى آثار أقدام كبيرة، ربما لحيوان ضخم!")
+    print("وأمامك أيضًا صخرة عالية يمكن أن تمنحك رؤية أوضح للغابة.")
 
-    if choice_a == "search":
-        print("You search carefully and find a mysterious item...")
-        # Placeholder logic
-    elif choice_a == "move on":
-        print("You decide to keep going without lingering...")
-        # Placeholder logic
-    else:
-        print("Unrecognized choice. You hesitate, but time moves on.")
-    
-    print("\n--- Moving to Section B of Scene 2 ---")
-    print("Section B: [Provide a second part of the story or challenge]")
-    
-    choice_b = input("Do you 'investigate' a nearby noise or 'ignore' and proceed forward? ").lower().strip()
-
-    if choice_b == "investigate":
-        print("You approach the source of the noise cautiously...")
-        return "scene_3"
-    elif choice_b == "ignore":
-        print("You choose to ignore the noise and continue...")
-        return "scene_3"
-    else:
-        print("Unclear action. Let's assume you continue onward.")
-        return "scene_3"
-
+    while True:
+        choice = input("هل تريد أن 'تشرب' من النهر، أم 'تتبع' الآثار، أم 'تتسلق' الصخرة؟ ").lower().strip()
+        
+        if choice == "تشرب":
+            print("\nتشرب من النهر وتشعر بالانتعاش...")
+            print("لكن فجأة ترى تمساحًا ضخمًا يقترب ببطء من الضفة!")
+            return "scene_3"
+        
+        elif choice == "تتبع":
+            print("\nتتبع آثار الأقدام بحذر بين الأشجار...")
+            print("الأرض رطبة، والآثار تقود إلى مكان غامض في العمق.")
+            return "scene_3"
+        
+        elif choice == "تتسلق":
+            print("\nتصعد على الصخرة العالية...")
+            print("من الأعلى ترى الدخان يتصاعد من بعيد، ربما نار أو معسكر!")
+            return "scene_3"
+        
+        else:
+            print("❌ خيار غير صحيح. حاول مرة أخرى.")
